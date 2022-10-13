@@ -1,0 +1,232 @@
+:root{
+    --black : #191414;
+    --indigo : #1DB954;
+    --primary-font: 'Montserrat', sans-serif;
+    --secondary-font: 'Poppins', sans-serif, 'arial';
+}   
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+  header{
+    color: #1d3557;
+    background-color: #1d3557;
+    list-style-type: none;
+  }
+  header li,a{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    list-style-type: none;
+  }
+ nav{
+    color: #1d3557;
+      display: flex;
+      flex-direction: row;
+      top: 0;
+      width: 100%;
+      justify-content: space-between
+  }
+  nav ul{
+      
+      display: flex;
+      flex-direction: row;
+      
+  }
+  nav ul li{
+      padding: 30px 20px;
+      list-style-type: none;
+      text-decoration: none;
+      color: var(--indigo);
+  }
+  nav ul li a{
+    color: var(--indigo);
+  }
+  .logo-img{
+    margin: 15px;
+      height: 50px;
+      cursor: pointer;
+  }
+  .nav__links li a{
+      transition: all 0.3s ease 0s;
+  }
+  
+  .logo{
+      display: flex;
+  }
+  .logo-title{
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      margin-top: auto;
+      margin-bottom: auto;
+      color: var(--indigo);
+  }
+ .title{
+     text-align: center;
+ }
+ .main-pg h1{
+    font-size: 120px;
+    font-family: var(--primary-font);
+    color: #ffffff;
+ }
+ .main-pg h2{
+    font-family: var(--primary-font);
+    color: var(--indigo);
+    font-weight: 300;
+    font-size: 21px;
+ }
+ .main-pg{
+    color: black;
+
+ }
+ .container{
+    background-color: var(--indigo);
+    margin-top: 30px;
+    width: 75%;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+ }
+ .container-left{
+    margin: 20px;
+    text-align: left;
+    font-family: var(--primary-font);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: var(--indigo);
+    flex: 1;
+ }
+ .container-right{
+    border: 1px solid #1DB954;
+    display: flex;
+    font-family: var(--primary-font);
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--black);
+    color: #1DB954;
+    flex: 2;
+ }
+ form{
+    width: 100%;
+ }
+
+ .container-right .input-box{
+    height: 30px;
+ }
+ .input-box{
+    height: 35px;
+    width: 300px;
+    border-radius: 20px;
+    border: none;
+    margin-right: 30px;
+ }
+ button{
+    border: 1px solid black;
+    font-weight: 500;
+    height: 35px;
+    width: 140px;
+    font-size: 16px;
+    font-family: var(--primary-font);
+ }
+ .res-head{
+    margin-top: 20px;
+    font-family: var(--primary-font);
+    font-weight: 600;
+ }
+ /*ContactUs*/
+
+
+.s4 h1 {
+    font-family: 'Poppins', sans-serif, 'arial';
+    font-weight: 600;
+    font-size: 72px;
+    color: white;
+    text-align: center;
+}
+
+.s4 h4 {
+    font-family: 'Roboto', sans-serif, 'arial';
+    font-weight: 400;
+    font-size: 20px;
+    color: #13e8e9;
+    line-height: 1.5;
+}
+
+
+
+.sub-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+}
+.s-lft{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.s2-img{
+    margin-right: auto;
+    margin-left: auto;
+    height: 700px;
+    width: 470px;
+}
+.s-rgt {
+    flex: 1.4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+}
+.s-rgt h3{
+    margin: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    font-style: bold;
+}
+.s-rgt p{
+    margin: 5px 0px 0px 15px;
+    font-size: 20px;
+    font-weight: 400;
+}
+.s-rgt button{
+    width: 110px;
+    height: 40px;
+    background-color: black;
+    color: #FFFD92;
+    border: none;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+#ss2 {
+    color: black;
+}
+
+#display-image{
+    width: 400px;
+    height: 225px;
+    border: 1px solid black;
+    background-position: center;
+    background-size: cover;
+  }
+#ss2 button{
+    color: #FFE2EB;
+    margin-left: 10px;
+}
+.s4-container{
+    height: 100%;
+    background-size: cover;
+}
+
+
+

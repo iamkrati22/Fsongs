@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"
+        integrity="sha512-gSf3NCgs6wWEdztl1e6vUqtRP884ONnCNzCpomdoQ0xXsk06lrxJsR7jX5yM/qAGkPGsps+4bLV5IEjhOZX+gg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- stats.js lib -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"
+        integrity="sha512-gSf3NCgs6wWEdztl1e6vUqtRP884ONnCNzCpomdoQ0xXsk06lrxJsR7jX5yM/qAGkPGsps+4bLV5IEjhOZX+gg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="script.js"></script>
+    <header>
+
+    </header>
+    <div id="fullPage">
+        <div class="section s1">
+            <nav id="navbar">
+                <div class="logo">
+                    <img src="./logo.png" alt="" class="logo-img" />
+                </div>
+                <ul class="nav__links">
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Services">Services</a></li>
+                    <li><a href="#ContactUs">ContactUs</a></li>
+                </ul>
+
+            </nav>
+            <a href="#Home"></a>
+
+            <div class="main-pg">
+                <center><h1>FSongs</h1>
+                    <h2> The one place for all your songs</h2>
+                    <div class="card">
+                        
+                        <div class="container">
+                            <div class = "container-left">
+                               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, quasi quae eos quibusdam nobis velit, voluptas nisi, obcaecati dolorem expedita atque ut delectus. We serve all songs ad free!! These songs are made available by various labels to us, and are all available to listen online for free.<br><br>
+                            </div>
+                            <div class="container-right">
+                                <form method="POST" onsubmit="return fetch();">
+                                    <input type="text" id="search" name='search' class = "input-box" placeholder="What are we listening to today?">
+                                    <button class="button" id="Submit" value="Submit"><span>Search </span></button>
+                                </form><p>
+                                    <div class="res-head">
+                                        S.No &nbsp;&nbsp; | &nbsp;&nbsp; Song Name &nbsp;&nbsp; | &nbsp;&nbsp; Rating &nbsp;&nbsp; |  &nbsp;&nbsp; Year of release 
+                                    </div>
+                                
+                                </p>
+                                <div id="results" class="res">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </center>
+            </div>
+        </div>
+        <div class="section s2"><a href="#About"></a>
+            <div class="sub-section">
+                <div class="s-lft">
+                    <img class="s2-img" src="" alt="">
+                </div>
+                <div class="s-rgt">
+                    <h3>Find your favourite tunes</h3>
+                    <p>What do you want to try next? Think of something you’re into—like “easy chicken dinner”—and see
+                        what you find.</p>
+                    <button>Explore</button>
+                </div>
+            </div>
+        </div>
+        <div class="section s3">
+            <div class="sub-section">
+                <div class="s-rgt" id="ss2">
+                    <h3>Get relevant results</h3>
+                    <p>What do you want to try next? Think of something you’re into—like “easy chicken dinner”—and see
+                        what you find.</p>
+                    <button>Explore</button>
+                </div>
+                <div class="s-lft">
+                    <img src="" alt="">
+                </div>
+
+            </div>
+        </div>
+        <div class="section s4">
+            <a href="#ContactUs"></a>
+            <div class="s4-container">
+                <div class="sub-section">
+                    <div class="s-lft" id="ss2">
+                       
+                    </div>
+                    <div class="s-rgt">
+                        <h3>You won't know until you try</h3>
+                        <p>What do you want to try next? Think of something you’re into—like “easy chicken dinner”—and
+                            see
+                            what you find.</p>
+                        <button>Explore</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!--FONT AWESOME-->
+    <div class="section"></div>
+
+    <script>
+        const image_input = document.querySelector("#image-input");
+image_input.addEventListener("change", function() {
+  const reader = new FileReader();
+  reader.addEventListener("load", () => {
+    const uploaded_image = reader.result;
+    document.querySelector("#display-image").style.backgroundImage = `url(${uploaded_image})`;
+  });
+  reader.readAsDataURL(this.files[0]);
+});
+    </script>
+    <script>
+        new fullpage("#fullPage", {
+            autoScrolling: true,
+            anchors: ["Home", "About", "Services", "ContactUs"],
+            navigation: true,
+            navigationTooltips: ["Home", "About", "Services", "Contact"],
+            showActiveTooltip: true,
+            sectionsColor: ["#191414", "#FFFFFF", "#FFFFFF", "#FFFFFF"],
+            controlArrows: true,
+        });
+        
+    </script>
+    <script>
+         function fetch() {
+              var data = new FormData();
+              data.append('search', document.getElementById("search").value);
+              data.append('ajax', 1);
+              var xhr = new XMLHttpRequest();
+              xhr.open('POST', "search_2.php");
+              xhr.onload = ()=>{
+                var results = JSON.parse(this.response),
+                wrapper = document.getElementById("results");
+                if (results.length > 0) {
+                  wrapper.innerHTML = "";
+                  for (let res of results) {
+                    let line = document.createElement("div");
+                    line.innerHTML = `${res['ID']} &nbsp;&nbsp;  | &nbsp;&nbsp; ${res['song_name']} &nbsp;&nbsp; | &nbsp;&nbsp; ${res['rating']} &nbsp;&nbsp; | &nbsp;&nbsp; ${res['rel_yr']} &nbsp;&nbsp; | &nbsp;&nbsp; ${res['play']}`;
+                    wrapper.appendChild(line);
+                  }
+                } else { wrapper.innerHTML = "No results found"; }
+              };
+              xhr.send(data);
+              return false;
+            }
+    </script>
+   
+    <script src="script.js"></script>
+</body>
+
+</html>
